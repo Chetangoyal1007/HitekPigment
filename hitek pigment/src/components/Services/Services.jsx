@@ -5,44 +5,47 @@ import { MdOutlineColorLens } from "react-icons/md";
 
 const skillsData = [
   {
-    name: "Decorative Paints",
-    icon: (
-      <FaPaintRoller className="text-5xl text-primary group-hover:text-black duration-300" />
-    ),
-    description: [
-      "High color strength and smooth finish.",
-      "Excellent dispersion and opacity.",
-      "Suitable for interior and exterior coatings.",
-      "Long-lasting brightness and durability.",
-    ],
-    aosDelay: "0",
-  },
+  name: "Paints & Inks",
+  icon: (
+    <FaPaintRoller className="text-5xl text-primary group-hover:text-black duration-300" />
+  ),
+  description: [
+    "High color strength with excellent tinting performance.",
+    "Superior dispersion for smooth and uniform finishes.",
+    "Outstanding opacity and coverage across formulations.",
+    "Durable pigments suitable for paints, coatings, and printing inks.",
+  ],
+  aosDelay: "0",
+},
+
+ {
+  name: "Pharma & Rubber",
+  icon: (
+    <GiChemicalDrop className="text-5xl text-primary group-hover:text-black duration-300" />
+  ),
+  description: [
+    "Pharma-grade pigments with high purity and safety compliance.",
+    "Excellent chemical and thermal stability.",
+    "Non-toxic, non-migrating, and contamination-safe formulations.",
+    "Widely used in rubber goods, medical products, and pharmaceuticals.",
+  ],
+  aosDelay: "400",
+},
+
   {
-    name: "Industrial Coatings",
-    icon: (
-      <GiChemicalDrop className="text-5xl text-primary group-hover:text-black duration-300" />
-    ),
-    description: [
-      "Superior chemical and heat resistance.",
-      "Stable performance in harsh environments.",
-      "Consistent shade accuracy.",
-      "Ideal for metal and protective coatings.",
-    ],
-    aosDelay: "400",
-  },
-  {
-    name: "Specialty Pigments",
-    icon: (
-      <MdOutlineColorLens className="text-5xl text-primary group-hover:text-black duration-300" />
-    ),
-    description: [
-      "Customized shades and formulations.",
-      "High purity and batch consistency.",
-      "Enhanced gloss and color brilliance.",
-      "Used in plastics, inks, and coatings.",
-    ],
-    aosDelay: "800",
-  },
+  name: "Plastics & Masterbatches",
+  icon: (
+    <MdOutlineColorLens className="text-5xl text-primary group-hover:text-black duration-300" />
+  ),
+  description: [
+    "High-performance pigments for plastic processing.",
+    "Excellent dispersion and compatibility with polymers.",
+    "Superior color strength, brightness, and opacity.",
+    "Ideal for masterbatches, molded plastics, films, and fibers.",
+  ],
+  aosDelay: "800",
+},
+
 ];
 
 const Services = () => {
