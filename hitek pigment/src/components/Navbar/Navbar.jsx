@@ -56,7 +56,7 @@ const Navbar = () => {
 
             {/* Phone */}
             <div className="hidden sm:flex items-center gap-3 text-gray-600 dark:text-gray-400">
-              <BiPhoneCall className="text-primary text-2xl animate-pulse" />
+              <BiPhoneCall className="text-primary text-6xl animate-pulse" />
               +91 7009406565
             </div>
 
