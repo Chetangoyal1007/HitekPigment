@@ -25,7 +25,7 @@ const ResponsiveMenu = ({ showMenu, setShowMenu }) => {
 
         {/* Navigation */}
         <nav>
-          <ul className="space-y-4 text-xl">
+          <ul className="space-y-6 text-xl">
             {Navlinks.map((data) => (
               <li key={data.id}>
                 <Link
@@ -47,7 +47,7 @@ const ResponsiveMenu = ({ showMenu, setShowMenu }) => {
         <a
           href="https://dilshad-ahmed.github.io/"
           target="_blank"
-          rel="noopener noreferrer"
+          rel="noreferrer"
           className="underline"
         >
           Dilshad
