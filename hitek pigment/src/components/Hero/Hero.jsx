@@ -24,24 +24,26 @@ const Hero = () => {
            {/* Company Name */}
 <div className="flex justify-center px-4">
   <div
-    data-aos="fade-up"
-    className="
-      inline-block
-      px-6 py-3
-      bg-white/30 backdrop-blur-md
-      rounded-sm
-    "
-  >
-    <p
+  data-aos="fade-up"
   className="
-    whitespace-nowrap
-    text-center
+    inline-block
+    px-4 sm:px-6 py-3
+    bg-white/30 backdrop-blur-md
+    rounded-sm
+    overflow-visible
+  "
+>
 
-    text-[clamp(0.95rem,6.5vw,4.2rem)]
+<p
+  className="
+    text-center
     font-black
     uppercase
 
-    tracking-[0.03em] sm:tracking-[0.06em]
+    text-[clamp(1.2rem,6vw,3.8rem)]
+    leading-tight
+
+    tracking-[0.06em]
 
     bg-gradient-to-r
     from-orange-500 via-red-500 to-pink-500
@@ -51,8 +53,11 @@ const Hero = () => {
     drop-shadow-[0_6px_20px_rgba(0,0,0,1)]
   "
 >
-  HITEK PIGMENTS & COATINGS PVT LTD
+  <span className="block">HITEK PIGMENTS</span>
+  <span className="block">& COATINGS</span>
+  <span className="block text-[0.7em] tracking-[0.2em]">PVT LTD</span>
 </p>
+
 
   </div>
 </div>
