@@ -1,5 +1,5 @@
 import React from "react";
-import BannerImg from "../../assets/color.jpg";
+import BannerImg from "../../assets/color.jpeg";
 import { motion } from "framer-motion";
 
 const BgStyle = {
@@ -23,25 +23,35 @@ const Hero = () => {
 
            {/* Company Name */}
 <div className="flex justify-center px-4">
-  <p
+  <div
     data-aos="fade-up"
     className="
-  text-xl sm:text-5xl md:text-3xl lg:text-4xl xl:text-5xl
-  font-extrabold
-  uppercase
-  tracking-wider
-  text-transparent
-  bg-clip-text
-bg-black
-
-
-  text-center
-  break-words
-"
-
+      inline-block
+      px-6 py-3
+      bg-white/30 backdrop-blur-md
+      rounded-sm
+    "
   >
-    Hitek Pigments & Coatings Pvt Ltd.
-  </p>
+    <p
+      className="
+        whitespace-nowrap
+        text-center
+        text-[min(9vw,4.5rem)]
+        font-black
+        uppercase
+        tracking-[0.08em]
+        bg-gradient-to-r
+    from-orange-500 via-red-500 to-pink-500
+
+
+    bg-clip-text
+    text-transparent
+        drop-shadow-[0_6px_20px_rgba(0,0,0,1)]
+      "
+    >
+      Hitek PIGMENT & COATING PVT LTD
+    </p>
+  </div>
 </div>
 
 
@@ -57,7 +67,7 @@ bg-black
 
             {/* Tagline */}
             <p data-aos="fade-up" data-aos-delay="500" className="text-gray-200">
-              Precision pigments and coating solutions engineered for lasting performance.
+              
             </p>
 
             {/* CTA */}

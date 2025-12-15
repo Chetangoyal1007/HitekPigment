@@ -24,7 +24,7 @@ const skillsData = [
     <GiChemicalDrop className="text-5xl text-primary group-hover:text-black duration-300" />
   ),
   description: [
-    "Pharma-grade pigments with high purity and safety compliance.",
+    "Pharma-grade chemicals with high purity and safety compliance.",
     "Excellent chemical and thermal stability.",
     "Non-toxic, non-migrating, and contamination-safe formulations.",
     "Widely used in rubber goods, medical products, and pharmaceuticals.",
