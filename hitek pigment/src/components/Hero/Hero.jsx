@@ -22,16 +22,27 @@ const Hero = () => {
           <div className="w-full md:w-[550px] mx-auto text-center space-y-5">
 
            {/* Company Name */}
-<div className="flex justify-center">
+<div className="flex justify-center px-4">
   <p
     data-aos="fade-up"
-    className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl 
-               font-bold uppercase tracking-wider text-white 
-               whitespace-nowrap text-center"
+    className="
+      text-xl 
+      sm:text-2xl 
+      md:text-3xl 
+      lg:text-4xl 
+      xl:text-5xl
+      font-bold 
+      uppercase 
+      tracking-wide 
+      text-white 
+      text-center
+      break-words
+    "
   >
     Hitek Pigments & Coatings Pvt Ltd.
   </p>
 </div>
+
 
 
             {/* Main Heading */}
