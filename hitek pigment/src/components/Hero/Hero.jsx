@@ -33,24 +33,27 @@ const Hero = () => {
     "
   >
     <p
-      className="
-        whitespace-nowrap
-        text-center
-        text-[min(9vw,4.5rem)]
-        font-black
-        uppercase
-        tracking-[0.08em]
-        bg-gradient-to-r
+  className="
+    whitespace-nowrap
+    text-center
+
+    text-[clamp(0.95rem,6.5vw,4.2rem)]
+    font-black
+    uppercase
+
+    tracking-[0.03em] sm:tracking-[0.06em]
+
+    bg-gradient-to-r
     from-orange-500 via-red-500 to-pink-500
-
-
     bg-clip-text
     text-transparent
-        drop-shadow-[0_6px_20px_rgba(0,0,0,1)]
-      "
-    >
-      Hitek PIGMENT & COATING PVT LTD
-    </p>
+
+    drop-shadow-[0_6px_20px_rgba(0,0,0,1)]
+  "
+>
+  HITEK PIGMENTS & COATINGS PVT LTD
+</p>
+
   </div>
 </div>
 
