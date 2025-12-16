@@ -15,16 +15,23 @@ export const Navlinks = [
 
 const Navbar = () => {
   const [showMenu, setShowMenu] = useState(false);
-  const [showIntro, setShowIntro] = useState(true);
+  const [showIntro, setShowIntro] = useState(() => {
+  return !sessionStorage.getItem("introPlayed");
+});
+
 
   // Remove intro after animation
   useEffect(() => {
-    const timer = setTimeout(() => {
-      setShowIntro(false);
-    }, 1800); // total animation time
+  if (!showIntro) return;
 
-    return () => clearTimeout(timer);
-  }, []);
+  const timer = setTimeout(() => {
+    setShowIntro(false);
+    sessionStorage.setItem("introPlayed", "true");
+  }, 1800);
+
+  return () => clearTimeout(timer);
+}, [showIntro]);
+
 
   return (
     <>

@@ -11,8 +11,8 @@ import {
 export const Navlinks = [
   {
     id: 1,
-    name: "Applications",
-    link: "/#applications",
+    name: "Products",
+    link: "/products",
   },
   {
     id: 2,

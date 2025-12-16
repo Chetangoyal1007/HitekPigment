@@ -72,14 +72,14 @@ const ContactUs = () => {
             <div className="flex items-start sm:items-center gap-4">
               <FaPhoneAlt className="text-sky-400 text-lg sm:text-xl mt-1 sm:mt-0" />
               <p className="text-gray-300 text-sm sm:text-base">
-                +91 12345 67890
+                +91 7009406565
               </p>
             </div>
 
             <div className="flex items-start sm:items-center gap-4">
               <FaEnvelope className="text-sky-400 text-lg sm:text-xl mt-1 sm:mt-0" />
               <p className="text-gray-300 text-sm sm:text-base break-all">
-                info@hitekpigments.com
+                Madhupaintapatiala@gmail.com
               </p>
             </div>
 
