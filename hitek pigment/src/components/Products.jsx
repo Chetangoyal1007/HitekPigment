@@ -8,19 +8,19 @@ const productsData = [
         name: "Golden Bronze Powder",
         description:
           "High brilliance metallic pigment used in decorative paints and coatings.",
-        image: "src/assets/golden-bronze-powder.webp",
+        image: "images/golden-bronze-powder.webp",
       },
       {
         name: "Rubine Toner",
         description:
           "Strong color strength toner suitable for inks and coatings.",
-        image: "src/assets/rubine toner.jpeg",
+        image: "/images/rubine-toner.jpeg",
       },
       {
         name: "Beta Blue / Alpha Blue",
         description:
           "High-performance blue pigments with excellent dispersion.",
-        image: "src/assets/beta blue.jpeg",
+        image: "/images/beta-blue.jpeg",
       },
     ],
   },
@@ -31,13 +31,13 @@ const productsData = [
         name: "Ketonic Resin",
         description:
           "Improves gloss, adhesion, and drying in coatings and inks.",
-        image: "src/assets/ketonic resin.webp",
+        image: "/images/ketonic-resin.webp",
       },
       {
         name: "Malik Resin",
         description:
           "High compatibility resin for industrial paint systems.",
-        image: "src/assets/melik resin.jpeg",
+        image: "/images/melik-resin.jpeg",
       },
     ],
   },
@@ -48,7 +48,7 @@ const productsData = [
         name: "Synthetic Iron Oxide",
         description:
           "Weather-resistant pigments for construction and coatings.",
-        image: "src/assets/synthetic iron oxide.jpeg",
+        image: "/images/synthetic-iron-oxide.jpeg",
       },
     ],
   },
@@ -59,7 +59,7 @@ const productsData = [
         name: "Carbon Black",
         description:
           "Deep black pigment with excellent UV protection.",
-        image: "src/assets/carbon black.jpeg",
+        image: "/images/carbon-black.jpeg",
       },
       {
         name: "Carbon Black N330",
@@ -76,19 +76,19 @@ const productsData = [
         name: "Pigment Blue 15.0",
         description:
           "High tinting strength blue pigment.",
-        image: "src/assets/pigment blue.webp",
+        image: "/images/pigment-blue.webp",
       },
       {
         name: "Pigment Green 7",
         description:
           "Durable green pigment used in plastics and coatings.",
-        image: "src/assets/pigment green.webp",
+        image: "/images/pigment-green.webp",
       },
       {
         name: "Prussian Blue",
         description:
           "Classic deep blue pigment for industrial applications.",
-        image: "src/assets/prussian blue.jpeg",
+        image: "/images/prussian-blue.jpeg",
       },
     ],
   },
@@ -99,7 +99,7 @@ const productsData = [
         name: "Solvent Soluble Dyes",
         description:
           "High solubility dyes for inks, plastics, and fuels.",
-        image: "src/assets/solvent-soluble-dyes.webp",
+        image: "/images/solvent-soluble-dyes.webp",
       },
     ],
   },
@@ -110,7 +110,7 @@ const Products = () => {
     <section className="py-16 bg-white dark:bg-black dark:text-white">
       <div className="container px-4">
 
-        {/* Page Header */}
+        {/* Header */}
         <div className="text-center mb-16">
           <h1 className="text-3xl sm:text-4xl font-bold">
             Our <span className="text-primary">Products</span>
@@ -125,7 +125,6 @@ const Products = () => {
         <div className="space-y-20">
           {productsData.map((category, index) => (
             <div key={index}>
-              {/* Category Title */}
               <h2
                 data-aos="fade-up"
                 className="text-2xl font-semibold mb-10 border-l-4 border-primary pl-4"
@@ -133,7 +132,6 @@ const Products = () => {
                 {category.category}
               </h2>
 
-              {/* Product Cards */}
               <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
                 {category.products.map((product, idx) => (
                   <div
@@ -142,15 +140,17 @@ const Products = () => {
                     className="group bg-gray-100 dark:bg-dark rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition duration-300"
                   >
                     {/* Image */}
-                    {/* Image */}
-<div className="bg-gray-200 dark:bg-gray-700 p-6 flex items-center justify-center">
-  <img
-    src={product.image}
-    alt={product.name}
-    className="max-h-44 w-auto object-contain"
-  />
-</div>
-
+                    <div className="bg-gray-200 dark:bg-gray-700 p-6 flex items-center justify-center">
+                      <img
+                        src={product.image}
+                        alt={product.name}
+                        loading="lazy"
+                        onError={(e) => {
+                          e.currentTarget.src = "/images/placeholder.png";
+                        }}
+                        className="max-h-44 w-auto object-contain"
+                      />
+                    </div>
 
                     {/* Content */}
                     <div className="p-6">
