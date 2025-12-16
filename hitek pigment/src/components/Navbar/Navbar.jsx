@@ -63,6 +63,7 @@ const Navbar = () => {
 
             {/* Phone */}
 {/* Phone (Click-to-Call) */}
+{/* Phone */}
 <a
   href="tel:+917009406565"
   className="
@@ -73,11 +74,12 @@ const Navbar = () => {
 >
   <BiPhoneCall className="text-primary text-3xl sm:text-5xl animate-pulse" />
 
-  {/* Number visible on all screens */}
-  <span className="text-sm sm:text-base font-medium">
+  {/* Number ONLY on desktop */}
+  <span className="hidden sm:inline text-base font-medium whitespace-nowrap">
     +91 7009406565
   </span>
 </a>
+
 
 
 
