@@ -1,4 +1,5 @@
-import React from "react";
+
+import React, { useState } from "react";
 
 // const productsData = [
 //   {
@@ -211,67 +212,109 @@ const productsData = [
   },
 ];
 
+
+
 const Products = () => {
+  const [search, setSearch] = useState("");
+  const [openIndex, setOpenIndex] = useState(null);
+
   return (
-    <section className="py-16 bg-white dark:bg-black dark:text-white">
-      <div className="container px-4">
+    <section className="py-20 bg-gray-50 dark:bg-black dark:text-white">
+      <div className="container px-4 max-w-6xl mx-auto">
 
         {/* Header */}
-        <div className="text-center mb-16">
-          <h1 className="text-3xl sm:text-4xl font-bold">
-            Our <span className="text-primary">Products</span>
+        <div className="text-center mb-14">
+          <h1 className="text-4xl font-bold">
+            Our <span className="text-primary">Product Portfolio</span>
           </h1>
-          <p className="mt-3 text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
-            Explore our comprehensive range of pigments, dyes, resins, and
-            specialty chemicals crafted for industrial excellence.
+          <p className="mt-4 text-gray-600 dark:text-gray-400 max-w-3xl mx-auto">
+            A diversified range of pigments, dyes, resins, and specialty chemicals
+            serving multiple industrial applications.
           </p>
         </div>
 
-        {/* Categories */}
-        <div className="space-y-20">
-          {productsData.map((category, index) => (
-            <div key={index}>
-              <h2
-                data-aos="fade-up"
-                className="text-2xl font-semibold mb-10 border-l-4 border-primary pl-4"
+        {/* Search */}
+        <div className="mb-12 flex justify-center">
+          <input
+            type="text"
+            placeholder="Search product name..."
+            value={search}
+            onChange={(e) => setSearch(e.target.value)}
+            className="
+              w-full max-w-xl
+              px-5 py-3
+              rounded-xl
+              border border-gray-300 dark:border-gray-700
+              bg-white dark:bg-gray-900
+              focus:outline-none focus:ring-2 focus:ring-primary
+            "
+          />
+        </div>
+
+        {/* Accordion Categories */}
+        <div className="space-y-6">
+          {productsData.map((category, index) => {
+            const filteredProducts = category.products.filter((p) =>
+              p.name.toLowerCase().includes(search.toLowerCase())
+            );
+
+            if (filteredProducts.length === 0) return null;
+
+            const isOpen = openIndex === index;
+
+            return (
+              <div
+                key={index}
+                className="bg-white dark:bg-dark rounded-2xl shadow-md overflow-hidden"
               >
-                {category.category}
-              </h2>
-
-              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-                {category.products.map((product, idx) => (
-                  <div
-                    key={idx}
-                    data-aos="fade-up"
-                    className="group bg-gray-100 dark:bg-dark rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition duration-300"
+                {/* Accordion Header */}
+                <button
+                  onClick={() => setOpenIndex(isOpen ? null : index)}
+                  className="
+                    w-full
+                    flex justify-between items-center
+                    px-8 py-5
+                    text-left
+                    font-semibold text-lg
+                    hover:bg-gray-100 dark:hover:bg-gray-800
+                    transition
+                  "
+                >
+                  <span>{category.category}</span>
+                  <span
+                    className={`transform transition ${
+                      isOpen ? "rotate-180" : ""
+                    }`}
                   >
-                    {/* Image */}
-                    <div className="bg-gray-200 dark:bg-gray-700 p-6 flex items-center justify-center">
-                      <img
-                        src={product.image}
-                        alt={product.name}
-                        loading="lazy"
-                        onError={(e) => {
-                          e.currentTarget.src = "/images/placeholder.png";
-                        }}
-                        className="max-h-44 w-auto object-contain"
-                      />
-                    </div>
+                    ▼
+                  </span>
+                </button>
 
-                    {/* Content */}
-                    <div className="p-6">
-                      <h3 className="text-lg font-semibold mb-2">
-                        {product.name}
-                      </h3>
-                      <p className="text-sm text-gray-600 dark:text-gray-400 leading-relaxed">
-                        {product.description}
-                      </p>
+                {/* Accordion Body */}
+                {isOpen && (
+                  <div className="px-8 pb-8 pt-4 border-t border-gray-200 dark:border-gray-700">
+                    <div className="flex flex-wrap gap-3">
+                      {filteredProducts.map((product, idx) => (
+                        <span
+                          key={idx}
+                          className="
+                            px-4 py-2
+                            text-sm font-medium
+                            rounded-full
+                            bg-primary/10 text-primary
+                            hover:bg-primary hover:text-white
+                            transition cursor-default
+                          "
+                        >
+                          {product.name}
+                        </span>
+                      ))}
                     </div>
                   </div>
-                ))}
+                )}
               </div>
-            </div>
-          ))}
+            );
+          })}
         </div>
 
       </div>
