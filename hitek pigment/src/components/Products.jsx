@@ -14,13 +14,13 @@ const productsData = [
         name: "Rubine Toner",
         description:
           "Strong color strength toner suitable for inks and coatings.",
-        image: "/images/rubine-toner.jpg",
+        image: "src/assets/rubine toner.jpeg",
       },
       {
         name: "Beta Blue / Alpha Blue",
         description:
           "High-performance blue pigments with excellent dispersion.",
-        image: "/images/beta-blue.jpg",
+        image: "src/assets/beta blue.jpeg",
       },
     ],
   },
@@ -31,13 +31,13 @@ const productsData = [
         name: "Ketonic Resin",
         description:
           "Improves gloss, adhesion, and drying in coatings and inks.",
-        image: "/images/ketonic-resin.jpg",
+        image: "src/assets/ketonic resin.webp",
       },
       {
         name: "Malik Resin",
         description:
           "High compatibility resin for industrial paint systems.",
-        image: "/images/malik-resin.jpg",
+        image: "src/assets/melik resin.jpeg",
       },
     ],
   },
@@ -48,7 +48,7 @@ const productsData = [
         name: "Synthetic Iron Oxide",
         description:
           "Weather-resistant pigments for construction and coatings.",
-        image: "/images/iron-oxide.jpg",
+        image: "src/assets/synthetic iron oxide.jpeg",
       },
     ],
   },
@@ -59,7 +59,7 @@ const productsData = [
         name: "Carbon Black",
         description:
           "Deep black pigment with excellent UV protection.",
-        image: "/images/carbon-black.jpg",
+        image: "src/assets/carbon black.jpeg",
       },
       {
         name: "Carbon Black N330",
@@ -76,19 +76,19 @@ const productsData = [
         name: "Pigment Blue 15.0",
         description:
           "High tinting strength blue pigment.",
-        image: "/images/pigment-blue.jpg",
+        image: "src/assets/pigment blue.webp",
       },
       {
         name: "Pigment Green 7",
         description:
           "Durable green pigment used in plastics and coatings.",
-        image: "/images/pigment-green.jpg",
+        image: "src/assets/pigment green.webp",
       },
       {
         name: "Prussian Blue",
         description:
           "Classic deep blue pigment for industrial applications.",
-        image: "/images/prussian-blue.jpg",
+        image: "src/assets/prussian blue.jpeg",
       },
     ],
   },
@@ -99,7 +99,7 @@ const productsData = [
         name: "Solvent Soluble Dyes",
         description:
           "High solubility dyes for inks, plastics, and fuels.",
-        image: "/images/solvent-dyes.jpg",
+        image: "src/assets/solvent-soluble-dyes.webp",
       },
     ],
   },
