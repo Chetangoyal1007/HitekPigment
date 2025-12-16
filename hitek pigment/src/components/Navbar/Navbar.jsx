@@ -62,10 +62,24 @@ const Navbar = () => {
           <div className="relative flex justify-between items-center h-44 sm:h-48">
 
             {/* Phone */}
-            <div className="hidden sm:flex items-center gap-3 text-gray-600 dark:text-gray-400">
-              <BiPhoneCall className="text-primary text-6xl animate-pulse" />
-              +91 7009406565
-            </div>
+{/* Phone (Click-to-Call) */}
+<a
+  href="tel:+917009406565"
+  className="
+    flex items-center gap-2
+    text-gray-600 dark:text-gray-400
+    hover:text-primary transition
+  "
+>
+  <BiPhoneCall className="text-primary text-3xl sm:text-5xl animate-pulse" />
+
+  {/* Number visible on all screens */}
+  <span className="text-sm sm:text-base font-medium">
+    +91 7009406565
+  </span>
+</a>
+
+
 
             {/* Navbar Logo */}
             <Link
