@@ -74,7 +74,7 @@ const Navbar = () => {
 
   {/* Number ONLY on desktop */}
   <span className="hidden sm:inline text-base font-medium whitespace-nowrap">
-    +91 7009406565
+    +91 9417604141
   </span>
 </a>
 
