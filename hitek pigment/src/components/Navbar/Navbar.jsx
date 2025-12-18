@@ -61,9 +61,7 @@ const Navbar = () => {
         <div className="container mx-auto px-4">
           <div className="relative flex justify-between items-center h-44 sm:h-48">
 
-            {/* Phone */}
-{/* Phone (Click-to-Call) */}
-{/* Phone */}
+  
 <a
   href="tel:+917009406565"
   className="

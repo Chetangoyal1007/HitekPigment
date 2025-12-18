@@ -1,121 +1,26 @@
-
 import React, { useState } from "react";
 
-// const productsData = [
-//   {
-//     category: "Pigments & Dyes",
-//     products: [
-//       {
-//         name: "Golden Bronze Powder",
-//         description:
-//           "High brilliance metallic pigment used in decorative paints and coatings.",
-//         image: "images/golden-bronze-powder.webp",
-//       },
-//       {
-//         name: "Rubine Toner",
-//         description:
-//           "Strong color strength toner suitable for inks and coatings.",
-//         image: "/images/rubine-toner.jpeg",
-//       },
-//       {
-//         name: "Beta Blue / Alpha Blue",
-//         description:
-//           "High-performance blue pigments with excellent dispersion.",
-//         image: "/images/beta-blue.jpeg",
-//       },
-//     ],
-//   },
-//   {
-//     category: "Resins",
-//     products: [
-//       {
-//         name: "Ketonic Resin",
-//         description:
-//           "Improves gloss, adhesion, and drying in coatings and inks.",
-//         image: "/images/ketonic-resin.webp",
-//       },
-//       {
-//         name: "Malik Resin",
-//         description:
-//           "High compatibility resin for industrial paint systems.",
-//         image: "/images/melik-resin.jpeg",
-//       },
-//     ],
-//   },
-//   {
-//     category: "Synthetic Iron Oxide",
-//     products: [
-//       {
-//         name: "Synthetic Iron Oxide",
-//         description:
-//           "Weather-resistant pigments for construction and coatings.",
-//         image: "/images/synthetic-iron-oxide.jpeg",
-//       },
-//     ],
-//   },
-//   {
-//     category: "Carbon Black",
-//     products: [
-//       {
-//         name: "Carbon Black",
-//         description:
-//           "Deep black pigment with excellent UV protection.",
-//         image: "/images/carbon-black.jpeg",
-//       },
-//       {
-//         name: "Carbon Black N330",
-//         description:
-//           "Reinforcing grade carbon black for industrial use.",
-//         image: "/images/carbon-black-n330.jpg",
-//       },
-//     ],
-//   },
-//   {
-//     category: "Color Pigment",
-//     products: [
-//       {
-//         name: "Pigment Blue 15.0",
-//         description:
-//           "High tinting strength blue pigment.",
-//         image: "/images/pigment-blue.webp",
-//       },
-//       {
-//         name: "Pigment Green 7",
-//         description:
-//           "Durable green pigment used in plastics and coatings.",
-//         image: "/images/pigment-green.webp",
-//       },
-//       {
-//         name: "Prussian Blue",
-//         description:
-//           "Classic deep blue pigment for industrial applications.",
-//         image: "/images/prussian-blue.jpeg",
-//       },
-//     ],
-//   },
-//   {
-//     category: "Solvent Soluble Dyes",
-//     products: [
-//       {
-//         name: "Solvent Soluble Dyes",
-//         description:
-//           "High solubility dyes for inks, plastics, and fuels.",
-//         image: "/images/solvent-soluble-dyes.webp",
-//       },
-//     ],
-//   },
-// ];
 const productsData = [
   {
     category: "Paints, Inks & Leather Chemicals",
     products: [
-      { name: "Aluminium Paste 30 (Non Leafing)" },
-      { name: "Aluminium Paste 30 (Leafing)" },
-      { name: "Beta Blue 15:3" },
-      { name: "Beta Blue 15:4" },
-      { name: "Alpha Plus" },
-      { name: "Carbon Black" },
-      { name: "Phthalocyanine Green 7" },
+      { 
+        name: "Aluminium Paste 30 (Non Leafing)",
+        description: "Non-leafing aluminium paste used for coatings and inks."
+      },
+      { 
+        name: "Aluminium Paste 30 (Leafing)",
+        description: "Leafing aluminium paste for decorative coatings with a metallic finish."
+      },
+      { 
+        name: "Beta Blue 15:3",
+        description: "High-performance phthalocyanine blue pigment for inks and coatings."
+      },
+      { 
+        name: "Carbon Black",
+        description: "Widely used for black pigmentation in plastics, inks and coatings."
+      },
+      { name: "Phthalocyanine Green 7", description: "Bright green pigment for paints and plastics." },
       { name: "Chromocyanine Green" },
       { name: "Ketonic Resins" },
       { name: "Lemon Chrome 121 / 122" },
@@ -129,14 +34,14 @@ const productsData = [
       { name: "Golden Powder (Rich Gold / Pale Gold)" },
       { name: "Copper Powder" },
       { name: "Yellow Oxide / Red Oxide" },
-      { name: "Zinc Stearate" },
+      { name: "Zinc Stearate" }
     ],
   },
 
   {
     category: "Mansi Solvent Soluble Dyes",
     products: [
-      { name: "Mansi Yellow GL / R" },
+      { name: "Mansi Yellow GL / R", description: "Yellow dye for solvent-based applications." },
       { name: "Mansi Orange RL" },
       { name: "Mansi Fire Red G" },
       { name: "Mansi Pink 5 BLG" },
@@ -217,6 +122,7 @@ const productsData = [
 const Products = () => {
   const [search, setSearch] = useState("");
   const [openIndex, setOpenIndex] = useState(null);
+  const [selectedProduct, setSelectedProduct] = useState(null); // NEW
 
   return (
     <section className="py-20 bg-gray-50 dark:bg-black dark:text-white">
@@ -297,13 +203,14 @@ const Products = () => {
                       {filteredProducts.map((product, idx) => (
                         <span
                           key={idx}
+                          onClick={() => setSelectedProduct(product)} // OPEN MODAL
                           className="
                             px-4 py-2
                             text-sm font-medium
                             rounded-full
                             bg-primary/10 text-primary
                             hover:bg-primary hover:text-white
-                            transition cursor-default
+                            transition cursor-pointer
                           "
                         >
                           {product.name}
@@ -318,6 +225,30 @@ const Products = () => {
         </div>
 
       </div>
+
+      {/* PRODUCT DETAILS MODAL */}
+      {selectedProduct && (
+        <div className="fixed inset-0 bg-black/50 backdrop-blur-sm flex items-center justify-center z-50">
+          <div className="bg-white dark:bg-gray-900 p-6 rounded-2xl shadow-xl max-w-md w-full">
+
+            <h2 className="text-2xl font-bold mb-3">
+              {selectedProduct.name}
+            </h2>
+
+            <p className="text-gray-600 dark:text-gray-300 mb-6">
+              {selectedProduct.description || "No additional details available."}
+            </p>
+
+            <button
+              onClick={() => setSelectedProduct(null)}
+              className="px-4 py-2 bg-primary text-white rounded-lg w-full hover:bg-primary/80 transition"
+            >
+              Close
+            </button>
+
+          </div>
+        </div>
+      )}
     </section>
   );
 };
