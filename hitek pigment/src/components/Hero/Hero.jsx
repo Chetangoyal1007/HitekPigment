@@ -22,7 +22,7 @@ const Hero = () => {
           <div className="w-full md:w-[550px] mx-auto text-center space-y-5">
 
            {/* Company Name */}
-<div className="flex justify-center px-4">
+<div className="flex justify-center px-2">
   <div
   data-aos="fade-up"
   className="
@@ -40,7 +40,7 @@ const Hero = () => {
     font-black
     uppercase
 
-    text-[clamp(1.2rem,6vw,3.8rem)]
+    text-[clamp(4.5rem,4vw,3.8rem)]
     leading-tight
 
     tracking-[0.06em]
