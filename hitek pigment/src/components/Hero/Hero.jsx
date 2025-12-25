@@ -79,14 +79,7 @@ const Hero = () => {
             </p>
 
             {/* CTA */}
-            <button
-              data-aos="fade-up"
-              data-aos-delay="700"
-              data-aos-once="true"
-              className="primary-btn"
-            >
-              Get Started
-            </button>
+            
 
           </div>
         </div>

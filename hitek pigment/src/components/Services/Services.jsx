@@ -90,7 +90,7 @@ const Services = () => {
                 ))}
 
                 <a
-                  href="#contact"
+                  href="/products"
                   className="primary-btn mt-4 group-hover:scale-105 duration-200"
                 >
                   Learn More

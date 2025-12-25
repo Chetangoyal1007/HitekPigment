@@ -30,9 +30,7 @@ const About = () => {
                 in April 2021, that manufactures and supplies various chemical products like pigments, dyes, resins, and metal powders for industries such as paints and coatings. The company is known for providing a range of industrial coloring agents and chemicals and has listings on B2B platforms like IndiaMART and Justdial. 
               </p>
             
-              <button data-aos="fade-up" className="button-outline">
-                Get Started
-              </button>
+              
             </div>
           </div>
         </div>
