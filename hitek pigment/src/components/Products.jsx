@@ -106,6 +106,144 @@ const productsData = [
     }
   ]
 },
+{
+  category: "Leather Chemicals",
+  description:
+    "Specialty pigments, metallics, resins, and dyes used in leather finishing and surface treatment applications to achieve uniform color, smooth texture, and long-lasting durability.",
+
+  products: [
+    
+    
+    {
+      name: "Aluminium Paste 30 (Leafing)",
+      description:
+        "Leafing aluminium paste used to create reflective metallic effects in decorative leather coatings."
+    },
+    {
+      name: "Beta Blue 15:3",
+      description:
+        "Phthalocyanine blue pigment used in leather coatings to produce bright and durable blue shades."
+    },
+    {
+      name: "Beta Blue 15:4",
+      description:
+        "Green-shade phthalocyanine blue pigment offering improved shade depth and durability in leather finishes."
+    },
+    {
+      name: "Alpha Plus",
+      description:
+        "High-purity organic pigment used to enhance color strength and dispersion in leather finishing systems."
+    },
+    {
+      name: "Carbon Black",
+      description:
+        "Widely used black pigment in leather finishes to achieve deep black shades with excellent coverage."
+    },
+    {
+      name: "Phthalocyanine Green 7",
+      description:
+        "High-performance green pigment used in leather finishing to obtain vibrant green tones with good fastness."
+    },
+    {
+      name: "Chromocyanine Green",
+      description:
+        "High-opacity green pigment providing strong color strength in leather surface coatings."
+    },
+    
+    {
+      name: "Lemon Chrome 121",
+      description:
+        "Bright yellow chrome pigment used in decorative leather finishes requiring strong opacity."
+    },
+    {
+      name: "Lemon Chrome 122",
+      description:
+        "High-opacity yellow pigment suitable for leather coating applications."
+    },
+    {
+      name: "Middle Chrome 131",
+      description:
+        "Medium-shade yellow pigment used in leather finishes for balanced yellow tones."
+    },
+    {
+      name: "Middle Chrome 132",
+      description:
+        "Durable yellow pigment providing consistent color in leather finishing systems."
+    },
+    {
+      name: "Scarlet Chrome 471",
+      description:
+        "Reddish-orange chrome pigment used in leather coatings for bright decorative shades."
+    },
+    {
+      name: "Scarlet Chrome 475",
+      description:
+        "High-intensity scarlet pigment delivering vivid coloration in leather finishes."
+    },
+    {
+      name: "Maroon Toner",
+      description:
+        "Organic toner pigment used in leather finishing to produce deep maroon and burgundy shades."
+    },
+   
+    {
+      name: "Rubine Toner",
+      description:
+        "Red toner pigment providing bright and uniform red shades in leather finishing applications."
+    },
+    {
+      name: "Red F4R",
+      description:
+        "Bright red pigment suitable for leather finishes requiring high color strength."
+    },
+    {
+      name: "Red RC",
+      description:
+        "Bluish-red pigment used in leather coatings for vibrant red tones."
+    },
+    {
+      name: "Red 2B",
+      description:
+        "Strong red pigment offering good coverage and durability in leather finishing systems."
+    },
+    {
+      name: "Orange 13",
+      description:
+        "High-visibility orange pigment used in decorative leather finishes."
+    },
+    {
+      name: "Orange 5",
+      description:
+        "Bright orange pigment suitable for leather coating and coloring applications."
+    },
+    {
+      name: "Golden Powder (Rich Gold)",
+      description:
+        "Metallic gold powder used to create premium decorative gold effects on leather surfaces."
+    },
+    {
+      name: "Golden Powder (Pale Gold)",
+      description:
+        "Light-shade metallic gold pigment used for subtle metallic finishes on leather."
+    },
+    
+    {
+      name: "Yellow Oxide",
+      description:
+        "Iron oxide yellow pigment used in leather coloring for natural yellow and tan shades."
+    },
+    {
+      name: "Red Oxide",
+      description:
+        "Iron oxide red pigment used in leather finishing for earthy red and brown tones."
+    },
+    {
+      name: "Zinc Stearate",
+      description:
+        "Lubricating and release agent used in leather finishes to improve smoothness and water resistance."
+    }
+  ]
+},
 
 { category: "Plastic Industry", description: "High-performance pigments and additives designed for plastic processing applications, providing excellent heat resistance, dispersion, and long-term color stability in polymer systems.", products: [ { name: "Beta Blue 15:3", description: "Phthalocyanine blue pigment offering excellent heat stability and color strength for plastic masterbatches and molded products." }, 
   { name: "Alpha Blue", description: "Organic blue pigment used in plastic applications requiring strong color strength and uniform dispersion." },
