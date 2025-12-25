@@ -2,6 +2,8 @@ import React from "react";
 import { FaPaintRoller } from "react-icons/fa";
 import { GiChemicalDrop } from "react-icons/gi";
 import { MdOutlineColorLens } from "react-icons/md";
+import { Link } from "react-router-dom";
+
 
 const skillsData = [
   {
@@ -89,12 +91,13 @@ const Services = () => {
                   </p>
                 ))}
 
-                <a
-                  href="/products"
-                  className="primary-btn mt-4 group-hover:scale-105 duration-200"
-                >
-                  Learn More
-                </a>
+                <Link
+  to="/products"
+  className="primary-btn mt-4 group-hover:scale-105 duration-200 inline-block"
+>
+  Learn More
+</Link>
+
               </div>
             ))}
           </div>
