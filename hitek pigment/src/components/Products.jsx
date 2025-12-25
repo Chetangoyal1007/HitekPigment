@@ -78,7 +78,26 @@ const productsData = [
       }
     ]
   },
+
   {
+  category: "Tin Stabalizer",
+  description:
+    "Iron oxide pigments specially formulated for cement, concrete, tiles, and construction applications, offering excellent alkali resistance, weather durability, and long-lasting color stability.",
+
+  products: [
+    {
+      name: "Anti Money Tin For Garden Pipe",
+      description:
+        "Iron oxide black pigment used in cement and tile applications to produce deep black and gray shades with excellent durability and weather resistance."
+    },
+    {
+      name: "MTS FOR PVC ",
+      description:
+        "Iron oxide brown pigment providing natural earthy brown tones in cement blocks, tiles, and concrete products."
+    },
+  ]
+},
+{
   category: "Cement & Tiles",
   description:
     "Iron oxide pigments specially formulated for cement, concrete, tiles, and construction applications, offering excellent alkali resistance, weather durability, and long-lasting color stability.",
