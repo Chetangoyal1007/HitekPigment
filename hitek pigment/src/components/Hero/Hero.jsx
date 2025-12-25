@@ -27,7 +27,7 @@ const Hero = () => {
   data-aos="fade-up"
   className="
     inline-block
-    px-4 sm:px-6 py-3
+    px-2 sm:px-6 py-3
     bg-white/30 backdrop-blur-md
     rounded-sm
     overflow-visible
@@ -40,7 +40,8 @@ const Hero = () => {
     font-black
     uppercase
 
-    text-[clamp(4.5rem,4vw,3.8rem)]
+    text-[clamp(3.6rem,3.2vw,2.6rem)]
+
     leading-tight
 
     tracking-[0.06em]
